@@ -4,8 +4,13 @@ class Counter extends Component {
   state = {
     count: 0,
     // imageUrl: "https://picsum.photos/200",
-    tags: ["tag1", "tag2", "tag3"],
+    // tags: ["tag1", "tag2", "tag3"],
   };
+
+  //   constructor() {
+  //     super();
+  //     this.handleIncrement = this.handleIncrement.bind(this);
+  //   }
 
   styles = {
     fontSize: 10,
@@ -22,16 +27,23 @@ class Counter extends Component {
       </ul>
     );
   }
+
+  handleIncrement = () => {
+    console.log("Increment Clicked", this);
+  };
   render() {
     return (
       <div>
-        {/* <img src={this.state.imageUrl}></img> */}
-        {/* <span style={this.styles} className={this.getBadgeClasses()}>
+        <img src={this.state.imageUrl}></img>
+        <span style={this.styles} className={this.getBadgeClasses()}>
           {this.formatCount()}
         </span>
-        <button className="btn btn-secondary btn-sm">Increment</button> */}
-        {this.state.tags.length === 0 && "Please create a new tag!"}
-        {this.renderTags()}
+        <button
+          onClick={this.handleIncrement}
+          className="btn btn-secondary btn-sm"
+        >
+          Increment
+        </button>
       </div>
     );
   }
