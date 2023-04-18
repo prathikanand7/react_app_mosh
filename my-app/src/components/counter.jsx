@@ -29,7 +29,6 @@ class Counter extends Component {
   }
 
   handleIncrement = (product) => {
-    console.log(product);
     console.log("Increment Clicked", this);
     this.setState({ count: this.state.count + 1 });
   };
