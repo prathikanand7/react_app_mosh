@@ -4,3 +4,5 @@ import "bootstrap/dist/css/bootstrap.css";
 import Counters from "./components/counters";
 
 ReactDOM.render(<Counters />, document.getElementById("root"));
+
+//npm start commard to launch the react frontend on http://localhost:3000/
